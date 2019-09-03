@@ -1,8 +1,6 @@
 # vue 中 for 循环出的加验证
 解决方法如下：
 1.首先是循环表单项：
-
-<template>
  <div class="content-body">
   <el-form ref="form" :model="form" :rules="rules" label-width="120px">
     <el-col :span="20">
@@ -20,13 +18,8 @@
       </el-row>
     </el-col>
    </el-row>
-   <el-form-item size="medium" class="div-submit">
-    <el-button @click="resetForm('form')">取消</el-button>
-    <el-button type="primary" @click="submitForm('form')">提交</el-button>
-   </el-form-item>
   </el-form>
  </div>
-</template>
 
 先是添加rules规则，这个和正常添加规则一样：
 
