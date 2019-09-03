@@ -1,8 +1,7 @@
 # vue 中 for 循环出的加验证
 解决方法如下：
 1.首先是循环表单项：
- <div class="content-body">
-  <el-form ref="form" :model="form" :rules="rules" label-width="120px">
+<el-form ref="form" :model="form" :rules="rules" label-width="120px">
     <el-col :span="20">
       <el-row :gutter="10" v-for="(item,index) in form.productGroup" :key="index">
        <el-col :span="6">
@@ -18,9 +17,7 @@
       </el-row>
     </el-col>
    </el-row>
-  </el-form>
- </div>
-
+ </el-form>
 先是添加rules规则，这个和正常添加规则一样：
 
 productGroupRules: {
