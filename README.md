@@ -32,13 +32,16 @@
 
 productGroupRules: {
  productGroupNum: [{required: true, message: '请填写商品数量', trigger: 'blur'}],
+ 
  productGroupPrice: [{required: true, message: '请填写优惠价格', trigger: 'blur'}]
 }
 
 然后给表单项添加验证，以商品数量为例：
 
 <el-form-item label="商品数量:" :prop="'productGroup.'+index+'.num'" :rules="productGroupRules.productGroupNum">
+ 
  <el-input v-model="item.num" type="number" size="small" style="width:80px;"></el-input>
+ 
 </el-form-item>
 
 注意这里:rules是每个表单项都要添加，有多个的话用productGroupRules.productGroupNum这样的形式区分，对应上面productGroupRules里的内容。
